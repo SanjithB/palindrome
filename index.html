@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+    <div class="box">
+    <h1>Is It A Palindrome?</h1>
+    <input type="text" id="pl">
+    <button type="button" onclick="palindrome()">check</button>
+</div>
+<div class="dp"></div>
+
+</main><br>
+    
+
+
+    <script>
+        function palindrome(){
+            let string=document.querySelector('#pl').value;
+            let display=document.querySelector('.dp');
+            str=string.toLowerCase();
+            let splitstr=str.split('');
+            let reverse=splitstr.reverse();
+            let reversejoin=reverse.join('');
+
+            if(str==reversejoin){
+                 display.innerHTML="Yes,it's a palindrome!"
+                 display.style.backgroundColor = "#24b476";
+            }
+            else{
+                 display.innerHTML="Nope.it's a not palindrome!"
+                 display.style.backgroundColor = "red";
+            }
+         }
+    </script>
+</body>
+</html>
